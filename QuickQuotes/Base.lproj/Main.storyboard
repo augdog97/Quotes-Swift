@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eCC-fG-OZx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m6c-7o-9cq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quote Table View Controller-->
+        <!--Quick Quotes-->
         <scene sceneID="aqk-s4-i4d">
             <objects>
                 <tableViewController id="eCC-fG-OZx" customClass="QuoteTableViewController" customModule="QuickQuotes" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,10 +31,65 @@
                             <outlet property="delegate" destination="eCC-fG-OZx" id="kMA-Z2-Jmb"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Quick Quotes" id="dWZ-QQ-o7C"/>
+                    <connections>
+                        <segue destination="969-P7-ThN" kind="show" identifier="moveToQuoteDetail" id="Fmt-VS-kMT"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Yt-hs-HFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-232" y="-579"/>
+            <point key="canvasLocation" x="676.81159420289862" y="-579.24107142857144"/>
+        </scene>
+        <!--Quote Detail View Controller-->
+        <scene sceneID="6Cx-SN-g2c">
+            <objects>
+                <viewController id="969-P7-ThN" customClass="QuoteDetailViewController" customModule="QuickQuotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Id4-PS-K4u">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3es-l5-pUr">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9pf-03-zQy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3es-l5-pUr" firstAttribute="leading" secondItem="9pf-03-zQy" secondAttribute="leading" id="6AW-d3-sPO"/>
+                            <constraint firstItem="3es-l5-pUr" firstAttribute="top" secondItem="9pf-03-zQy" secondAttribute="top" id="RIl-Ya-DvK"/>
+                            <constraint firstItem="9pf-03-zQy" firstAttribute="trailing" secondItem="3es-l5-pUr" secondAttribute="trailing" id="b56-9Z-59f"/>
+                            <constraint firstItem="9pf-03-zQy" firstAttribute="bottom" secondItem="3es-l5-pUr" secondAttribute="bottom" id="n0J-p1-gpg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="643-cA-2Uh"/>
+                    <connections>
+                        <outlet property="quoteLabel" destination="3es-l5-pUr" id="W4M-U4-nkC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hk1-Tc-MCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="-579"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yjQ-Je-3MR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m6c-7o-9cq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2GJ-OQ-3jE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eCC-fG-OZx" kind="relationship" relationship="rootViewController" id="An3-r5-BrY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvU-V8-VHl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233.33333333333334" y="-579.24107142857144"/>
         </scene>
     </scenes>
     <resources>

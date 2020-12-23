@@ -13,6 +13,7 @@
 		CBCB975925901209009F9C89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBCB975825901209009F9C89 /* Assets.xcassets */; };
 		CBCB975C25901209009F9C89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBCB975A25901209009F9C89 /* LaunchScreen.storyboard */; };
 		CBCB976625902135009F9C89 /* QuoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB976525902135009F9C89 /* QuoteTableViewController.swift */; };
+		CBCB976925907B26009F9C89 /* QuoteDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCB976825907B26009F9C89 /* QuoteDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CBCB975B25901209009F9C89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBCB975D25901209009F9C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBCB976525902135009F9C89 /* QuoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewController.swift; sourceTree = "<group>"; };
+		CBCB976825907B26009F9C89 /* QuoteDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				CBCB975125901208009F9C89 /* SceneDelegate.swift */,
 				CBCB975525901208009F9C89 /* Main.storyboard */,
 				CBCB976525902135009F9C89 /* QuoteTableViewController.swift */,
+				CBCB976825907B26009F9C89 /* QuoteDetailViewController.swift */,
 				CBCB975825901209009F9C89 /* Assets.xcassets */,
 				CBCB975A25901209009F9C89 /* LaunchScreen.storyboard */,
 				CBCB975D25901209009F9C89 /* Info.plist */,
@@ -139,6 +142,7 @@
 			files = (
 				CBCB975025901208009F9C89 /* AppDelegate.swift in Sources */,
 				CBCB976625902135009F9C89 /* QuoteTableViewController.swift in Sources */,
+				CBCB976925907B26009F9C89 /* QuoteDetailViewController.swift in Sources */,
 				CBCB975225901208009F9C89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
